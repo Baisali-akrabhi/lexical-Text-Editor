@@ -7,6 +7,7 @@ import { TableCellNode, TableNode, TableRowNode } from "@lexical/table";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import AutoLinkPlugin from "./plugins/AutoLinkPlugin";
 import CodeHighlightPlugin from ".//plugins/CodeHighlightPlugin";
+import ComponentPickerMenuPlugin from "./plugins/ComponentPickerPlugin"
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import ExampleTheme from "./themes/ExampleTheme";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
@@ -18,7 +19,8 @@ import { MarkdownShortcutPlugin } from "@lexical/react/LexicalMarkdownShortcutPl
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { TRANSFORMERS } from "@lexical/markdown";
 import ToolbarPlugin from "./plugins/ToolbarPlugin";
-import TreeViewPlugin from "./plugins/TreeViewPlugin";
+
+// import TreeViewPlugin from "./plugins/TreeViewPlugin";
 
 function Placeholder() {
   return <div className="editor-placeholder">Enter some rich text...</div>;
@@ -58,6 +60,7 @@ export default function Editor() {
             placeholder={<Placeholder />}
           />
           <HistoryPlugin />
+          <ComponentPickerMenuPlugin />
           {/* <TreeViewPlugin /> */}
           <AutoFocusPlugin />
           <CodeHighlightPlugin />
